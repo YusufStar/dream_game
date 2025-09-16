@@ -1,0 +1,34 @@
+class_name State_Walk
+extends State
+
+@export var move_speed: float = 75.0
+
+@onready var idle: State = $"../Idle"
+
+func Enter() -> void:
+    player.UpdateAnimation("walk")
+    pass
+
+func Exit() -> void:
+    pass
+
+func Process(_delta: float) -> State:
+    if player.direction == Vector2.ZERO:
+        return idle
+
+    # --- Smooth movement ---
+    var target_velocity = player.direction.normalized() * move_speed
+    player.velocity = player.velocity.lerp(target_velocity, player.acceleration * _delta)
+
+    # --- Update direction & animation ---
+    if player.SetDirection():
+        player.UpdateAnimation("walk")
+
+    return null
+
+
+func Physics(_delta: float) -> State:
+    return null
+
+func HandleInput(_event: InputEvent) -> State:
+    return null
