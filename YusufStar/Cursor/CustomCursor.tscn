@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bynsym6pla57r"]
+
+[ext_resource type="Texture2D" uid="uid://cm4wvow1qtig4" path="res://YusufStar/Cursor/cursor.svg" id="1_2qn6x"]
+[ext_resource type="Script" uid="uid://dv8smqkuw7ksm" path="res://YusufStar/Cursor/CustomCursor.gd" id="1_60vpv"]
+
+[node name="Cursor" type="Sprite2D"]
+texture = ExtResource("1_2qn6x")
+script = ExtResource("1_60vpv")

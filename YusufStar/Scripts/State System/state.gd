@@ -4,19 +4,19 @@ extends Node
 static var player: Player
 
 func _ready() -> void:
-    pass
+	pass
 
 func Enter() -> void:
-    pass
+	pass
 
 func Exit() -> void:
-    pass
+	pass
 
 func Process(_delta: float) -> State:
-    return null
+	return null
 
 func Physics(_delta: float) -> State:
-    return null
+	return null
 
 func HandleInput(_event: InputEvent) -> State:
-    return null
+	return null

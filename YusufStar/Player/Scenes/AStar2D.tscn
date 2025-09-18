@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr3c6namv3475"]
+
+[ext_resource type="Script" uid="uid://blcffgvp610i1" path="res://YusufStar/Player/Scripts/pathfinder.gd" id="1_saarx"]
+
+[node name="AStar2d" type="Node"]
+script = ExtResource("1_saarx")

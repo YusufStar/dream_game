@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2waav2ofxbtn"
-path="res://.godot/imported/sea_grass.png-765ea82c97035ecb101008b27201442b.ctex"
+uid="uid://dfdicfo433gse"
+path="res://.godot/imported/Farmer_Dig.png-40eed010da785a2df8594ae1dc4f83f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://YusufStar/Tiles/Grounds/sea_grass.png"
-dest_files=["res://.godot/imported/sea_grass.png-765ea82c97035ecb101008b27201442b.ctex"]
+source_file="res://YusufStar/Player/Sprites/Farmer_Dig.png"
+dest_files=["res://.godot/imported/Farmer_Dig.png-40eed010da785a2df8594ae1dc4f83f2.ctex"]
 
 [params]
 
