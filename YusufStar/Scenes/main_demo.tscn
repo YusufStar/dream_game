@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://dwhbe6qg3puk5"]
+[gd_scene load_steps=6 format=4 uid="uid://dwhbe6qg3puk5"]
 
 [ext_resource type="TileSet" uid="uid://ckco2b5xq22yx" path="res://YusufStar/Tiles/home_demo.tres" id="1_bkg5s"]
 [ext_resource type="PackedScene" uid="uid://y3tk81qhs0w4" path="res://YusufStar/Player/Scenes/Character.tscn" id="2_vlh7c"]
 [ext_resource type="PackedScene" uid="uid://bynsym6pla57r" path="res://YusufStar/Cursor/CustomCursor.tscn" id="3_vlh7c"]
 [ext_resource type="PackedScene" uid="uid://cr3c6namv3475" path="res://YusufStar/Player/Scenes/AStar2D.tscn" id="4_fu8m5"]
-[ext_resource type="Script" uid="uid://c510qdleklsjh" path="res://YusufStar/Scenes/test_dig_button.gd" id="5_gffrl"]
 
 [sub_resource type="TileSet" id="TileSet_hen72"]
 tile_size = Vector2i(32, 32)
@@ -36,12 +35,3 @@ ground_display = NodePath("../GroundLayer/GroundDisplay")
 
 [node name="AStar2d" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("4_fu8m5")]
 tilemap = NodePath("../GroundLayer/GroundDisplay")
-
-[node name="Button" type="Button" parent="."]
-z_index = 10
-offset_left = -237.0
-offset_top = 159.0
-offset_right = -154.0
-offset_bottom = 207.0
-text = "Tıkla ve Kazı"
-script = ExtResource("5_gffrl")

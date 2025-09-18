@@ -24,7 +24,7 @@ func _ready() -> void:
 	state_machine.Initialize(self)
 	cursor.connect("cell_clicked", Callable(self, "_on_cell_clicked"))
 
-	if tilemap:
+	if tilemap and pathfinder_node:
 		var cell_pos = Vector2i(0, 0)
 		# Use the pathfinder's cell_to_world function to get proper center position
 		global_position = pathfinder_node.cell_to_world(cell_pos)

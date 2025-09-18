@@ -13,7 +13,7 @@ func Exit() -> void:
 func Process(_delta: float) -> State:
 	if player.path_index < player.path.size():
 		var next_cell: Vector2i = player.path[player.path_index]
-		# Get the world position of the cell center
+		# Get the world position of the cell center using pathfinder
 		var global_next = player.pathfinder_node.cell_to_world(next_cell)
 		var delta_pos = global_next - player.global_position
 
