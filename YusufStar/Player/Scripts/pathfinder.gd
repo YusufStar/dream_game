@@ -44,10 +44,6 @@ func BuildAStar() -> void:
 			var nid = _cell_to_id(n)
 			if astar.has_point(nid) and not astar.are_points_connected(id, nid, true):
 				astar.connect_points(id, nid, true)
-				# print("Connected:", cell, "<->", n)
-
-	print("--- AStar build complete ---")
-	print("Total points:", astar.get_point_count())
 
 func _cell_to_id(cell: Vector2i) -> int:
 	return (cell.y + y_offset) * id_stride + (cell.x + x_offset)
@@ -85,12 +81,10 @@ func GetPath(start: Vector2i, goal: Vector2i) -> Array:
 			goal_ok = true
 	
 	if not start_ok or not goal_ok:
-		print("AStar missing point after fallback! start:", start, "goal:", goal, "sid:", sid, "gid:", gid)
 		return []
 	
 	var path_ids = astar.get_id_path(sid, gid)
 	if path_ids.is_empty():
-		print("AStar returned empty path for:", start, "->", goal, "(ids:", sid, ",", gid, ")")
 		return []
 	
 	# Convert IDs back to Vector2i cells

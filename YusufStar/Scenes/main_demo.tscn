@@ -21,14 +21,14 @@ tile_set = ExtResource("1_bkg5s")
 tile_set = SubResource("TileSet_hen72")
 
 [node name="Character" parent="." node_paths=PackedStringArray("tilemap", "pathfinder_node", "cursor") instance=ExtResource("2_vlh7c")]
+wall_min_slide_angle = 0.0
 tilemap = NodePath("../GroundLayer/GroundDisplay")
 pathfinder_node = NodePath("../AStar2d")
 cursor = NodePath("../Cursor")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
+[node name="Camera2D" type="Camera2D" parent="Character"]
 position_smoothing_enabled = true
-position_smoothing_speed = 50.0
+position_smoothing_speed = 100.0
 
 [node name="Cursor" parent="." node_paths=PackedStringArray("ground_display") instance=ExtResource("3_vlh7c")]
 ground_display = NodePath("../GroundLayer/GroundDisplay")

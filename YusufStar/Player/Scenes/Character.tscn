@@ -1,17 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://y3tk81qhs0w4"]
+[gd_scene load_steps=23 format=3 uid="uid://y3tk81qhs0w4"]
 
 [ext_resource type="Script" uid="uid://bo3cmih3o4whv" path="res://YusufStar/Player/Scripts/player.gd" id="1_jtv2v"]
-[ext_resource type="Texture2D" uid="uid://dgtox33tlsdgv" path="res://YusufStar/Player/Sprites/Farmer_Walk.png" id="2_jtv2v"]
+[ext_resource type="Texture2D" uid="uid://iv5sjskixu78" path="res://YusufStar/Player/Farmer_2_32x32.png" id="2_1jnbg"]
 [ext_resource type="Script" uid="uid://mt2b7wxg131y" path="res://YusufStar/Scripts/State System/player_state_machine.gd" id="3_ll1bx"]
 [ext_resource type="Script" uid="uid://dh6mv0b8ycqlv" path="res://YusufStar/Scripts/State System/state_idle.gd" id="4_cjvox"]
 [ext_resource type="Script" uid="uid://qy15fbjfntxf" path="res://YusufStar/Scripts/State System/state_walk.gd" id="5_qwu4k"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_20055"]
-radius = 25.02
+radius = 27.0185
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jtv2v"]
-atlas = ExtResource("2_jtv2v")
-region = Rect2(0, 0, 768, 192)
+atlas = ExtResource("2_1jnbg")
+region = Rect2(0, 64, 12288, 1664)
 
 [sub_resource type="Animation" id="Animation_ll1bx"]
 length = 0.001
@@ -26,6 +26,74 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_07gie"]
+resource_name = "dig_walk_down"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(18, 4), Vector2i(19, 4), Vector2i(20, 4), Vector2i(21, 4), Vector2i(22, 4), Vector2i(23, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_drrh1"]
+resource_name = "dig_walk_left"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(12, 4), Vector2i(13, 4), Vector2i(14, 4), Vector2i(15, 4), Vector2i(16, 4), Vector2i(17, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_n7sdo"]
+resource_name = "dig_walk_right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 4), Vector2i(1, 4), Vector2i(2, 4), Vector2i(3, 4), Vector2i(4, 4), Vector2i(5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_1jnbg"]
+resource_name = "dig_walk_up"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(6, 4), Vector2i(7, 4), Vector2i(8, 4), Vector2i(9, 4), Vector2i(10, 4), Vector2i(8, 4)]
 }
 
 [sub_resource type="Animation" id="Animation_jtv2v"]
@@ -165,9 +233,31 @@ tracks/0/keys = {
 "values": [Vector2i(6, 2), Vector2i(7, 2), Vector2i(8, 2), Vector2i(9, 2), Vector2i(10, 2), Vector2i(11, 2)]
 }
 
+[sub_resource type="Animation" id="Animation_uuuag"]
+resource_name = "dig_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(9, 5), Vector2i(10, 5), Vector2i(11, 5), Vector2i(12, 5), Vector2i(13, 5), Vector2i(14, 5), Vector2i(15, 5), Vector2i(16, 5), Vector2i(17, 5)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_of6ex"]
 _data = {
 &"RESET": SubResource("Animation_ll1bx"),
+&"dig_up": SubResource("Animation_uuuag"),
+&"dig_walk_down": SubResource("Animation_07gie"),
+&"dig_walk_left": SubResource("Animation_drrh1"),
+&"dig_walk_right": SubResource("Animation_n7sdo"),
+&"dig_walk_up": SubResource("Animation_1jnbg"),
 &"idle_down": SubResource("Animation_jtv2v"),
 &"idle_left": SubResource("Animation_cjvox"),
 &"idle_right": SubResource("Animation_qwu4k"),
@@ -179,6 +269,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 4096
 motion_mode = 1
 wall_min_slide_angle = 0.174533
 script = ExtResource("1_jtv2v")
@@ -189,11 +280,10 @@ shape = SubResource("CircleShape2D_20055")
 
 [node name="PlayerSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, -32)
 texture = SubResource("AtlasTexture_jtv2v")
-hframes = 24
-vframes = 3
-frame = 54
+hframes = 128
+vframes = 13
+frame = 649
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 reset_on_save = false
